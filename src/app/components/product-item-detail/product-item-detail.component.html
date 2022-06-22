@@ -1,0 +1,20 @@
+<div *ngIf="product else loading" class="detail-container">
+  <img src="{{product.url}}" alt="" class="shadow">
+  <div class="detail-item ">
+    <h1>{{product.name}}</h1>
+    <h2 class="fw-bold text-success">${{product.price}}</h2>
+    <p>{{product.description}}</p>
+    <input type="number" value="{{amount}}" min="1" class="select-input form-control"
+      (change)="inputChangeHandler($event)">
+    <button class="btn btn-primary" (click)="addToCartHander()">Add to Cart</button>
+    <a routerLink="/" class="back-link d-flex align-baseline text-decoration-none gap-1">
+      <span class="material-icons">
+        west
+      </span>
+      Back to product list
+    </a>
+  </div>
+</div>
+<ng-template #loading>
+  <mat-spinner class="d-flex justify-content-center mt-5 m-auto"></mat-spinner>
+</ng-template>

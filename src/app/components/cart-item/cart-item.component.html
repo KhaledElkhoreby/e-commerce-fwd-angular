@@ -1,0 +1,12 @@
+<mat-card *ngIf="cartItem" class="cart-item shadow rounded">
+  <img src="{{cartItem.url}}" alt="">
+  <div class="cart-item-details h6">
+    <h2>{{cartItem.name}}</h2>
+    <h3 class="fw-bold text-success">${{cartItem.price}}</h3>
+    <div class="d-flex align-items-baseline gap-1">
+      Amount:
+      <input type="number" class="number-input form-control" value="{{cartItem.amount}}" min="0"
+        (change)="inputChangeHandler($event)">
+    </div>
+  </div>
+</mat-card>

@@ -1,0 +1,28 @@
+.product-image {
+  list-style-type: none;
+  width: 290px;
+  margin: 6px 6px;
+  cursor: pointer;
+}
+
+img {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.025);
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.select-input {
+  width: 108px;
+  margin-bottom: 8px;
+}
