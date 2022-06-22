@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import ICartItem from '../models/ICartItem';
+import ICheckout from '../models/ICheckout';
 import IProduct from '../models/IProduct';
 
 @Injectable({
@@ -11,6 +12,7 @@ export class CartService {
   private _totalPrice = 0;
   private _cartItems: ICartItem[] = [];
   totalPriceSubject = new Subject<number>();
+  private _checkoutInfo!: ICheckout;
 
   constructor() {}
 
@@ -57,6 +59,14 @@ export class CartService {
 
   getTotalPrice() {
     return this.fixedPriceDecimals(this._totalPrice);
+  }
+
+  addCheckoutInfo(checkoutInfo: ICheckout) {
+    this._checkoutInfo = checkoutInfo;
+  }
+
+  getCheckoutInfo() {
+    return this._checkoutInfo;
   }
 
   fixedPriceDecimals(num: number) {
