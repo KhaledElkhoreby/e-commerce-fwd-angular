@@ -34,5 +34,6 @@ export class ProductItemDetailComponent implements OnInit {
   addToCartHander() {
     console.log(this.product);
     this.cart.addCartItem(this.product!, this.amount);
+    alert(`${this.product?.name} is added to Cart`);
   }
 }

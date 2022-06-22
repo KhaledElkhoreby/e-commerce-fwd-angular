@@ -1,7 +1,8 @@
-<div *ngIf="productList else loading" class="product-index justify-content-center gap-3">
+<div *ngIf="!isLoading" class="product-index justify-content-center gap-2">
   <app-product-item *ngFor="let product of productList" [product]="product" class="product-container">
   </app-product-item>
 </div>
-<ng-template #loading>
-  <mat-spinner class="d-flex justify-content-center mt-5 m-auto"></mat-spinner>
-</ng-template>
+<div *ngIf="isLoading">
+  <mat-spinner class=" mt-5 m-auto">
+  </mat-spinner>
+</div>
