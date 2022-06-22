@@ -1,10 +1,16 @@
 # MyStore Project Overview
 
-MyStore is Angular application that allows users to view a list of available products to purchase, add them to a shopping cart, and ultimately complete the checkout process. 
+MyStore is Angular application that allows users to view a list of available products to purchase, add them to a shopping cart, and ultimately complete the checkout process.
 
 ## Getting Started
 
 To use these files, simply merge the folders into the root directory of your scaffolded Angular application.
+
+to install packages type `yarn`
+
+to start type `yarn start`
+
+to bulid type `yarn build`
 
 ## Project Instructions
 
@@ -14,7 +20,7 @@ You've completed the course! You know how to create a single-page application to
 
 ![MyStore shopping flow](shoppingflow.gif)
 
-To showcase your new skills, you'll build an e-commerce website – an application that allows users to view a list of available products to purchase, add them to a shopping cart, and ultimately complete the checkout process. 
+To showcase your new skills, you'll build an e-commerce website – an application that allows users to view a list of available products to purchase, add them to a shopping cart, and ultimately complete the checkout process.
 
 #### How will this help my career?
 
